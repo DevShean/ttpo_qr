@@ -10,12 +10,27 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-maroon-dark: #4a0000;
+  --color-maroon-light: #6a0000;
+  --color-gold-light: #d4af37;
+  --color-gold-dark: #b68c1a;
+  --color-brand-olive: #6b704d;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+}
+
+@layer utilities {
+  @keyframes shine {
+    0% { left: -20%; }
+    100% { left: 120%; }
+  }
+  .animate-shine {
+    animation: shine 1.5s infinite;
   }
 }
 
